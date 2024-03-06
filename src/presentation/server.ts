@@ -1,3 +1,4 @@
+import { CheckService } from "../domain/use-cases/checks/check-service";
 import { CronService } from "./cron/cron-service";
 
 export class Server {
@@ -6,6 +7,11 @@ export class Server {
 		CronService.createJob(
 			'*/5 * * * * *',
 			() => {
+
+				new CheckService(
+					() => console.log('succes'),
+					(error) => console.log(error)
+				).execute('https://google.com');
 
 			}
 		);

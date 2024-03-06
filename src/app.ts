@@ -1,3 +1,10 @@
-export const name: string = 'Antonio!!';
+import { Server } from "./presentation/server";
 
-console.log(name);
+(async() => { //función anonima asincrona autoinvocada
+    main();
+})();
+
+function main(){
+    Server.start();
+}
+

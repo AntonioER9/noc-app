@@ -17,7 +17,7 @@ export class LogEntity {
   }
 
   //"{ "level": "high", "message":"Hola Mundo", "createdAt":"128937TZ12378123" }"
-  static fromJson = (json: string): LogEntity => {
+  static fromJson = (json: string): LogEntity => { //factory constructor
     const { message, level, createdAt } = JSON.parse(json);
 
     const log = new LogEntity(message, level);

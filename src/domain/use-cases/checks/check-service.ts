@@ -26,15 +26,14 @@ export class CheckService implements CheckServiceUseCase {
 
       const log = new LogEntity(`Service ${url} working`, LogSeverityLevel.low);
       this.logRepository.saveLog(log);
-      this.successCallback && this.successCallback();
+      this.successCallback && this.successCallback(); //Si existe lo llamo
 
       return true;
     } catch (error) {
       const errorMessage = `${url} is not ok. ${error}`;
       const log = new LogEntity(errorMessage, LogSeverityLevel.high);
       this.logRepository.saveLog(log);
-
-      this.errorCallback && this.errorCallback(errorMessage);
+      this.errorCallback && this.errorCallback(errorMessage); //Si existe lo llamo
 
       return false;
     }

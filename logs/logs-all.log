@@ -1,9 +1,8 @@
-{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-07T20:08:15.233Z"}
-{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-07T20:08:20.092Z"}
-{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-07T20:08:25.188Z"}
-{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-07T20:08:30.102Z"}
-{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-07T20:08:35.119Z"}
-{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-07T20:08:40.093Z"}
-{"message":"http://localhost:3000 is not ok. TypeError: fetch failed","level":"high","createdAt":"2024-03-07T20:08:45.050Z"}
-{"message":"http://localhost:3000 is not ok. TypeError: fetch failed","level":"high","createdAt":"2024-03-07T20:08:50.005Z"}
-{"message":"http://localhost:3000 is not ok. TypeError: fetch failed","level":"high","createdAt":"2024-03-07T20:08:55.004Z"}
+{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-11T12:39:40.311Z","origin":"check-service.ts"}
+{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-11T12:39:45.257Z","origin":"check-service.ts"}
+{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-11T12:39:50.181Z","origin":"check-service.ts"}
+{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-11T12:39:55.126Z","origin":"check-service.ts"}
+{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-11T12:40:00.092Z","origin":"check-service.ts"}
+{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-11T12:40:05.114Z","origin":"check-service.ts"}
+{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-11T12:40:10.078Z","origin":"check-service.ts"}
+{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-11T12:40:15.156Z","origin":"check-service.ts"}

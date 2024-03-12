@@ -4,3 +4,5 @@ logs/
 # Logs
 .DS_Store
 .env
+
+mongo/

@@ -16,7 +16,7 @@ export class FileSystemDatasource implements LogDatasource {
 
   private createLogsFiles = () => {
     if (!fs.existsSync(this.logPath)) {
-      fs.mkdirSync(this.logPath); //crear el directorio
+      fs.mkdirSync(this.logPath);
     }
 
     [
@@ -24,11 +24,12 @@ export class FileSystemDatasource implements LogDatasource {
       this.mediumLogsPath,
       this.highLogsPath,
     ].forEach(path => {
-      if (fs.existsSync(path)) return; //si existe no hago nada
+      if (fs.existsSync(path)) return;
 
-      fs.writeFileSync(path, ''); // si no existe lo creo
+      fs.writeFileSync(path, '');
     });
   }
+
 
   async saveLog(newLog: LogEntity): Promise<void> {
 
@@ -46,8 +47,12 @@ export class FileSystemDatasource implements LogDatasource {
 
   }
 
+
+
   private getLogsFromFile = (path: string): LogEntity[] => {
     const content = fs.readFileSync(path, 'utf-8');
+    if (content === '') return [];
+
     const logs = content.split('\n').map(LogEntity.fromJson);
     // const logs = content.split('\n').map( 
     //   log => LogEntity.fromJson(log)
@@ -55,6 +60,7 @@ export class FileSystemDatasource implements LogDatasource {
 
     return logs;
   }
+
 
   async getLogs(severityLevel: LogSeverityLevel): Promise<LogEntity[]> {
 
@@ -73,4 +79,5 @@ export class FileSystemDatasource implements LogDatasource {
     }
 
   }
+
 }

@@ -1,10 +1,14 @@
 node_modules/
 dist/
-logs/
+
 # Logs
 .DS_Store
+
+
+logs/
+
+
 .env
 
-mongo/
-
-postgres/
+/mongo
+/postgres

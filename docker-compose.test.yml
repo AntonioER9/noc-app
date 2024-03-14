@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  mongo-db:
+    image: mongo:6.0.6
+    restart: always #Reiniciar el contenedor cuando se reinicie el docker desktop
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASS}
+    volumes: #No perder los datos cuando el contenedor se apague
+      - ./mongo-test:/data/db
+    ports: #Puerto por defecto mapeado el de nuestra computadora con el del contenedor
+      - 27017:27017
+
+  postgres-db:
+    image: postgres:15.3
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./postgres-test:/var/lib/postgresql/data
+    ports:
+      - 5432:5432

@@ -1,0 +1,3 @@
+{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-14T22:51:45.402Z","origin":"check-service.ts"}
+{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-14T22:55:05.275Z","origin":"check-service.ts"}
+{"message":"Service https://google.com working","level":"low","createdAt":"2024-03-14T22:55:10.099Z","origin":"check-service.ts"}
